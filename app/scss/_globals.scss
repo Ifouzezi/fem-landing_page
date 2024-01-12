@@ -24,7 +24,6 @@ html {
   a:visited,
   a:hover {
     text-decoration: none;
-    color: $grayishBlue;
   }
   
  // Flexbox
@@ -74,5 +73,18 @@ button,
 
   &:hover::before {
     opacity: 1;
+  }
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
   }
 }
