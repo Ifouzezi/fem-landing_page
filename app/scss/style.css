@@ -50,8 +50,56 @@ html {
 }
 
 .container {
-  padding-left: 1.5rem;
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+.container--pall {
+  padding-top: 4.375rem;
   padding-right: 1.5rem;
+  padding-bottom: 4.375rem;
+  padding-left: 1.5rem;
+}
+@media (min-width: 64em) {
+  .container--pall {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.container--py {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.container--pt {
+  padding-top: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--pt {
+    padding-top: 6rem;
+  }
+}
+.container--pr {
+  padding-right: 1.5rem;
+}
+.container--pb {
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 64em) {
+  .container--pb {
+    padding-bottom: 6rem;
+  }
+}
+.container--pl {
+  padding-left: 1.5rem;
 }
 
 body {
@@ -191,9 +239,6 @@ button:hover::before,
 .header__menu > span:not(:last-child) {
   margin-bottom: 3px;
 }
-.header__cta {
-  color: hsl(0, 0%, 100%);
-}
 .header__links {
   position: relative;
   font-size: 0.875rem;
@@ -222,6 +267,12 @@ button:hover::before,
   opacity: 1;
 }
 
+@media (min-width: 64em) {
+  .hero {
+    display: flex;
+    align-items: center;
+  }
+}
 .hero__image {
   position: relative;
   background-image: url("/images/bg-intro-mobile.svg");
@@ -229,6 +280,14 @@ button:hover::before,
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 17.5rem;
+}
+@media (min-width: 64em) {
+  .hero__image {
+    flex: 3;
+    order: 2;
+    height: 40.9375rem;
+    background-image: url("/images/bg-intro-desktop.svg");
+  }
 }
 .hero__image::before {
   content: "";
@@ -240,7 +299,19 @@ button:hover::before,
   background-repeat: no-repeat;
   background-position: center bottom;
 }
+.hero__text {
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .hero__text {
+    flex: 2;
+    order: 1;
+  }
+}
 .hero__text h1 {
   font-weight: 300;
   color: hsl(233, 26%, 24%);
+  font-size: 2.8125rem;
+  margin-top: 0px;
+  margin-bottom: 1.5rem;
 }/*# sourceMappingURL=style.css.map */

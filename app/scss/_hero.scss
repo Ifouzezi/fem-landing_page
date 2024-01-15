@@ -1,10 +1,14 @@
 .hero {
+
+  
+  @include breakpoint-up(large){    
+    display: flex;
+    align-items: center;
+    
+  }
   
     .container {
-  
-      @include breakpoint-up(large){  
-
-      } 
+   
        
     }
   
@@ -21,7 +25,10 @@
       }
   
       @include breakpoint-up(large){
-        
+        flex: 3;
+        order: 2;
+        height: 40.9375rem;
+        background-image: url('/images/bg-intro-desktop.svg');
       }
   
       &::before, &::after {
@@ -45,10 +52,20 @@
     }
   
     &__text {
-        h1 {
-            font-weight: 300;
-            color: $darkBlue;
-        }
+
+      @include breakpoint-up(large){
+        flex: 2;
+        order: 1;
+      }
+
+      text-align: center;
+      h1 {
+        font-weight: 300;
+        color: $darkBlue;
+        font-size: 2.8125rem;
+        margin-top: 0px;
+        margin-bottom: 1.5rem;
+      }
       
     }
   }
